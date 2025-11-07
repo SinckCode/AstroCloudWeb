@@ -1,0 +1,52 @@
+@import "./variables";
+
+.ac-infra {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+
+    p {
+      color: $text-muted;
+      font-size: 0.95rem;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: $radius-lg;
+    background: $bg-elevated;
+    border: 1px solid $border-subtle;
+    padding: 1.5rem 1.8rem;
+    max-width: 340px;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: $text-muted;
+      font-size: 0.9rem;
+
+      & + li {
+        margin-top: 0.7rem;
+      }
+
+      span {
+        color: $accent;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .ac-infra__content {
+    flex-direction: column;
+  }
+
+  .ac-infra__list {
+    max-width: 100%;
+  }
+}

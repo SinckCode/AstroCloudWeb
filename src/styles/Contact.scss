@@ -1,0 +1,104 @@
+@import "./variables";
+
+/* Sección de contacto */
+.ac-contact {
+  padding-block: 6rem 4rem; // margen vertical cómodo
+}
+
+/* Layout principal: texto + formulario */
+.ac-contact__content {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  justify-content: space-between; // reparte bien el espacio
+  max-width: 1120px;              // alínea con el resto del sitio
+  margin: 0 auto;                 // centra el bloque
+}
+
+/* Columna de texto */
+.ac-contact__copy {
+  flex: 1;
+  max-width: 540px;
+
+  p {
+    color: $text-muted;
+  }
+
+  h2 {
+    margin-bottom: 0.75rem;
+  }
+}
+
+/* Formulario */
+.ac-contact__form {
+  flex: 0 0 380px;  // ancho base en desktop
+  width: 420px;
+  background: $bg-elevated;
+  border-radius: $radius-lg;
+  border: 1px solid $border-subtle;
+  padding: 1.6rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ac-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+
+  label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: $text-muted;
+  }
+
+  input,
+  textarea {
+    border-radius: 10px;
+    border: 1px solid $border-subtle;
+    background: #08080b;
+    padding: 0.7rem 0.8rem;
+    color: $text-main;
+    font-size: 0.9rem;
+
+    &:focus {
+      outline: 1px solid $accent;
+    }
+  }
+}
+
+/* Estado del formulario (éxito / error) */
+.ac-contact__status {
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+
+  &--success {
+    color: $accent;
+  }
+
+  &--error {
+    color: $danger;
+  }
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .ac-contact__content {
+    flex-direction: column;
+    max-width: 100%;
+    padding-inline: 1.5rem;
+  }
+
+  .ac-contact__copy {
+    max-width: none;
+  }
+
+  .ac-contact__form {
+    flex: 1 1 auto;
+    max-width: 100%;
+    width: 100%;
+  }
+}

@@ -1,0 +1,64 @@
+@import "./variables";
+
+.ac-footer {
+  padding: 2.5rem 6vw 1.5rem;
+  border-top: 1px solid $border-subtle;
+  background: #050506;
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  &__left {
+    max-width: 320px;
+
+    p {
+      color: $text-muted;
+      font-size: 0.85rem;
+    }
+  }
+
+  &__logo {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin-bottom: 0.4rem;
+  }
+
+  &__right {
+    display: flex;
+    gap: 3rem;
+    font-size: 0.85rem;
+
+    h4 {
+      margin: 0 0 0.4rem;
+      font-size: 0.9rem;
+    }
+
+    a {
+      display: block;
+      color: $text-muted;
+
+      &:hover {
+        color: $accent;
+      }
+    }
+  }
+
+  &__bottom {
+    margin-top: 0.4rem;
+    font-size: 0.75rem;
+    color: $text-muted;
+  }
+}
+
+@media (max-width: 960px) {
+  .ac-footer__top {
+    flex-direction: column;
+  }
+}
