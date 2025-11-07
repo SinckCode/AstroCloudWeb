@@ -14,10 +14,11 @@ const Footer = () => {
         </div>
 
         <div className="ac-footer__right">
-          <div>
+          {/*<div>
             <h4>Contacto</h4>
             <p>contacto@astrocloud.dev</p>
           </div>
+            */}
           <div>
             <h4>Enlaces</h4>
             <a href="#services">Servicios</a>
