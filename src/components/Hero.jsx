@@ -16,7 +16,7 @@ const Hero = () => {
         <p className="ac-hero__eyebrow">Desarrollo · Infraestructura · Nube</p>
 
         <h1 className="ac-hero__title">
-          DesarrollaA tu
+          Desarrolla tu
           <span>Universo Digital</span>
         </h1>
 
